@@ -1,0 +1,43 @@
+# <type>(<scope>): <subject>
+#
+# <body>
+#
+# <footer>
+
+# Type should be one of the following:
+# * feat: A new feature
+# * fix: A bug fix
+# * docs: Documentation only changes
+# * style: Changes that do not affect the meaning of the code
+# * refactor: A code change that neither fixes a bug nor adds a feature
+# * test: Adding missing tests or correcting existing tests
+# * chore: Changes to the build process or auxiliary tools
+# * perf: A code change that improves performance
+# * ci: Changes to our CI configuration files and scripts
+# * build: Changes that affect the build system or external dependencies
+# * revert: Reverts a previous commit
+
+# Scope should be the area of the codebase affected (optional)
+# Examples: app, widgets, features, entities, shared, ui, lib, etc.
+
+# Subject should be a short description (max 50 characters)
+# Use imperative mood: "add feature" not "added feature" or "adds feature"
+
+# Body should explain what and why, not how (optional)
+# Wrap at 72 characters
+
+# Footer should contain any information about Breaking Changes (optional)
+# and reference any issues that this commit closes
+
+# Examples:
+# feat: add user authentication
+# fix(ui): resolve button alignment issue
+# docs: update README with installation instructions
+# style: format code with prettier
+# refactor(api): simplify user service logic
+# test: add unit tests for item factory
+# chore: update dependencies
+# perf: optimize bundle size
+# ci: add GitHub Actions workflow
+# build: update Vite configuration
+# revert: revert "feat: add dark mode"

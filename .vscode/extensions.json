@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-vscode.vscode-markdown",
+    "ms-vscode.vscode-github-actions",
+    "ms-vscode.vscode-github-pullrequest",
+    "ms-vscode.vscode-github-issues",
+    "ms-vscode.vscode-github-repositories",
+    "vitest.explorer",
+    "ms-vscode.vscode-coverage-gutters",
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-yaml",
+    "ms-vscode.vscode-markdown",
+    "ms-vscode.vscode-github-actions",
+    "ms-vscode.vscode-github-pullrequest",
+    "ms-vscode.vscode-github-issues",
+    "ms-vscode.vscode-github-repositories"
+  ]
+}
