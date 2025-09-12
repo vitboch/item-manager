@@ -247,7 +247,12 @@ The application is automatically deployed to GitHub Pages:
 3. **Push to main branch** triggers automatic deployment
 4. **Monitor deployment** in Actions tab
 
-For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md).
+> **⚠️ Important**: GitHub Pages must be enabled in repository settings before deployment will work.
+
+For detailed setup instructions, see:
+
+- [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) - Complete setup guide
+- [ENABLE_GITHUB_PAGES.md](./ENABLE_GITHUB_PAGES.md) - Quick fix for current issue
 
 ## 🎨 UI Components
 
