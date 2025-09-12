@@ -11,6 +11,12 @@ A **production-ready** React/TypeScript application demonstrating **expert-level
 
 > **🎯 Perfect for Senior/Lead Frontend Developer positions** - Demonstrates mastery of modern React ecosystem, architectural patterns, and professional development practices.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Application](https://vitboch.github.io/item-manager/)**
+
+The application is automatically deployed to GitHub Pages and updates on every push to the main branch.
+
 ## 🚀 Features
 
 ### 🏗️ **Architecture & Design Patterns**
@@ -83,7 +89,8 @@ src/
 # Configuration files
 ├── .github/workflows/     # GitHub Actions
 │   ├── ci.yml            # CI/CD pipeline
-│   └── release.yml       # Release workflow
+│   ├── release.yml       # Release workflow
+│   └── deploy.yml        # GitHub Pages deployment
 ├── .vscode/              # VS Code settings
 │   ├── settings.json     # Editor configuration
 │   ├── extensions.json   # Recommended extensions
@@ -211,6 +218,7 @@ The project includes a complete CI/CD pipeline with GitHub Actions:
 
 - **CI Pipeline** - Runs on every push and PR
 - **Release Pipeline** - Automated releases on version tags
+- **GitHub Pages Deployment** - Automatic deployment to GitHub Pages
 - **Preview Deployments** - Automatic preview deployments for PRs
 
 ### Quality Gates
@@ -220,6 +228,26 @@ The project includes a complete CI/CD pipeline with GitHub Actions:
 - No security vulnerabilities
 - Code must be properly formatted
 - TypeScript compilation must succeed
+
+## 🚀 Deployment
+
+### GitHub Pages
+
+The application is automatically deployed to GitHub Pages:
+
+- **Live URL**: https://vitboch.github.io/item-manager/
+- **Automatic Deployment**: Updates on every push to main branch
+- **Build Process**: Runs tests, builds production bundle, deploys to Pages
+- **Performance Monitoring**: Lighthouse CI integration for performance tracking
+
+### Manual Deployment
+
+1. **Enable GitHub Pages** in repository settings
+2. **Set source** to "GitHub Actions"
+3. **Push to main branch** triggers automatic deployment
+4. **Monitor deployment** in Actions tab
+
+For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md).
 
 ## 🎨 UI Components
 
