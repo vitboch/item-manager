@@ -3,20 +3,13 @@ import { cn } from "@/shared/lib/utils";
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
-  /** Input label */
   label?: string;
-  /** Error message to display */
   error?: string;
-  /** Helper text */
   helperText?: string;
-  /** Input size */
   size?: "sm" | "md" | "lg";
 }
 
-/**
- * Reusable Input component with label, error states, and validation
- * Optimized with React.memo for performance
- */
+// Reusable Input component
 export const Input = React.memo<InputProps>(
   ({ label, error, helperText, size = "md", className, id, ...props }) => {
     const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;

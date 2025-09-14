@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({
   closeOnEscape = true,
   className,
 }) => {
-  // Handle escape key press
+  // Handle escape key
   const handleEscape = useCallback(
     (event: KeyboardEvent) => {
       if (event.key === "Escape" && closeOnEscape) {
@@ -44,11 +44,11 @@ const Modal: React.FC<ModalProps> = ({
     [onClose, closeOnOverlayClick]
   );
 
-  // Add/remove event listeners
+  // Add event listeners
   useEffect(() => {
     if (isOpen) {
       document.addEventListener("keydown", handleEscape);
-      // Prevent body scroll when modal is open
+      // Prevent body scroll
       document.body.style.overflow = "hidden";
     }
 

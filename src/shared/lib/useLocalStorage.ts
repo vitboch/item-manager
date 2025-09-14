@@ -1,18 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 
-/**
- * Custom hook for managing localStorage with React state synchronization
- * Provides type-safe localStorage operations with error handling
- *
- * @param key - localStorage key
- * @param initialValue - default value if key doesn't exist
- * @returns [value, setValue, removeValue] tuple
- */
+// Custom hook for managing localStorage with React state synchronization
 export function useLocalStorage<T>(
   key: string,
   initialValue: T
 ): [T, (value: T | ((prev: T) => T)) => void, () => void] {
-  // Get value from localStorage or use initial value
+  // Get value from localStorage
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
@@ -23,7 +16,7 @@ export function useLocalStorage<T>(
     }
   });
 
-  // Update localStorage when state changes
+  // Update localStorage
   const setValue = useCallback(
     (value: T | ((prev: T) => T)) => {
       try {
@@ -43,7 +36,7 @@ export function useLocalStorage<T>(
     [key, storedValue]
   );
 
-  // Remove value from localStorage
+  // Remove value
   const removeValue = useCallback(() => {
     try {
       setStoredValue([] as T);
@@ -53,7 +46,7 @@ export function useLocalStorage<T>(
     }
   }, [key]);
 
-  // Listen for changes to this localStorage key from other tabs
+  // Listen for changes from other tabs
   useEffect(() => {
     const handleStorageChange = (e: StorageEvent) => {
       if (e.key === key && e.newValue !== null) {

@@ -2,7 +2,7 @@
   "name": "item-manager",
   "private": true,
   "version": "1.0.0",
-  "description": "Advanced React TypeScript application demonstrating expert-level frontend development practices with FSD architecture",
+  "description": "A simple React TypeScript application for managing items with FSD architecture",
   "keywords": [
     "react",
     "typescript",

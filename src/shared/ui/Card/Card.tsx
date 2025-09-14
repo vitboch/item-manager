@@ -2,18 +2,12 @@ import React from "react";
 import { cn } from "@/shared/lib/utils";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Card variant */
   variant?: "default" | "elevated" | "outlined";
-  /** Card padding size */
   padding?: "sm" | "md" | "lg";
-  /** Whether card is interactive (hoverable) */
   interactive?: boolean;
 }
 
-/**
- * Reusable Card component with multiple variants
- * Optimized with React.memo for performance
- */
+// Reusable Card component
 export const Card = React.memo<CardProps>(
   ({
     children,

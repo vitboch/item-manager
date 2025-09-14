@@ -4,24 +4,16 @@ import { Item } from "@/entities/item";
 import { RemoveItemButton } from "@/features/remove-item";
 
 export interface ItemsListProps {
-  /** Array of items to display */
   items: Item[];
-  /** Callback when item is removed */
   onRemoveItem: (itemId: string) => void;
-  /** Whether any removal is in progress */
   removing?: boolean;
-  /** Custom class name */
   className?: string;
 }
 
-/**
- * List component for displaying items with remove functionality
- * Features empty state, animations, and performance optimizations
- * Optimized with React.memo and useCallback for performance
- */
+// List component for displaying items
 export const ItemsList = React.memo<ItemsListProps>(
   ({ items, onRemoveItem, removing = false, className }) => {
-    // Handle item removal with callback optimization
+    // Handle item removal
     const handleRemoveItem = useCallback(
       (itemId: string) => {
         onRemoveItem(itemId);
@@ -29,7 +21,7 @@ export const ItemsList = React.memo<ItemsListProps>(
       [onRemoveItem]
     );
 
-    // Format creation date for display
+    // Format creation date
     const formatDate = useCallback((timestamp: number) => {
       return new Date(timestamp).toLocaleDateString("ru-RU", {
         day: "2-digit",
@@ -40,7 +32,7 @@ export const ItemsList = React.memo<ItemsListProps>(
       });
     }, []);
 
-    // Empty state component
+    // Empty state
     if (items.length === 0) {
       return (
         <Card className={`text-center py-12 ${className}`} variant="outlined">

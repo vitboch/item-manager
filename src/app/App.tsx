@@ -4,11 +4,7 @@ import { ItemsList } from "@/widgets/items-list";
 import { ConfirmationModal } from "@/shared/ui";
 import { useItemsManager, useModal } from "@/shared/lib";
 
-/**
- * Main App component
- * Demonstrates FSD architecture with clean separation of concerns
- * Features responsive design and modern UI patterns
- */
+// Main App component
 export const App: React.FC = () => {
   const {
     items,
@@ -23,7 +19,7 @@ export const App: React.FC = () => {
   const clearAllModal = useModal();
   const [isClearing, setIsClearing] = React.useState(false);
 
-  // Handle clear all with modal confirmation
+  // Handle clear all
   const handleClearAll = async () => {
     setIsClearing(true);
     try {
@@ -45,7 +41,7 @@ export const App: React.FC = () => {
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Item Manager</h1>
               <p className="text-gray-600 mt-1">
-                Advanced React TypeScript application with FSD architecture
+                Simple item management application
               </p>
             </div>
 
@@ -80,19 +76,12 @@ export const App: React.FC = () => {
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="text-center text-sm text-gray-500">
-            <p>
-              Built with React 18, TypeScript, Tailwind CSS, and FSD
-              architecture
-            </p>
-            <p className="mt-1">
-              Features: localStorage persistence, performance optimizations, and
-              comprehensive testing
-            </p>
+            <p>Built with React, TypeScript and Tailwind CSS</p>
           </div>
         </div>
       </footer>
 
-      {/* Clear All Confirmation Modal */}
+      {/* Clear All Modal */}
       <ConfirmationModal
         isOpen={clearAllModal.isOpen}
         onClose={clearAllModal.close}

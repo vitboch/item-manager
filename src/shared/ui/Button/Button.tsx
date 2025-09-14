@@ -3,20 +3,13 @@ import { cn } from "@/shared/lib/utils";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Button variant */
   variant?: "primary" | "danger" | "secondary";
-  /** Button size */
   size?: "sm" | "md" | "lg";
-  /** Loading state */
   loading?: boolean;
-  /** Icon to display before text */
   icon?: React.ReactNode;
 }
 
-/**
- * Reusable Button component with multiple variants and sizes
- * Optimized with React.memo for performance
- */
+// Reusable Button component
 export const Button = React.memo<ButtonProps>(
   ({
     children,

@@ -3,19 +3,12 @@ import { Button, Input, Card } from "@/shared/ui";
 import { CreateItemData } from "@/entities/item";
 
 export interface AddItemFormProps {
-  /** Callback when item is added */
   onAddItem: (item: CreateItemData) => void;
-  /** Whether form is in loading state */
   loading?: boolean;
-  /** Custom class name */
   className?: string;
 }
 
-/**
- * Form component for adding new items
- * Features validation, loading states, and keyboard shortcuts
- * Optimized with useCallback for performance
- */
+// Form component for adding new items
 export const AddItemForm: React.FC<AddItemFormProps> = ({
   onAddItem,
   loading = false,
@@ -24,7 +17,7 @@ export const AddItemForm: React.FC<AddItemFormProps> = ({
   const [name, setName] = useState("");
   const [error, setError] = useState("");
 
-  // Validate input and handle form submission
+  // Handle form submission
   const handleSubmit = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
@@ -53,13 +46,13 @@ export const AddItemForm: React.FC<AddItemFormProps> = ({
     [name, onAddItem]
   );
 
-  // Handle input change with validation
+  // Handle input change
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value;
       setName(value);
 
-      // Clear error when user starts typing
+      // Clear error when typing
       if (error) {
         setError("");
       }
@@ -67,7 +60,7 @@ export const AddItemForm: React.FC<AddItemFormProps> = ({
     [error]
   );
 
-  // Handle Enter key press
+  // Handle Enter key
   const handleKeyPress = useCallback(
     (e: React.KeyboardEvent) => {
       if (e.key === "Enter" && !e.shiftKey) {
